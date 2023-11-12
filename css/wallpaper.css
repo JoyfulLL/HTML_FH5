@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+#out{
+	width: 1200px;
+	margin: 0 auto;
+	height:auto;
+}
+#container1{
+	margin: 10px auto;
+	width: 580px;
+	height: 330px;
+	float: left;
+}
+#container2{
+	margin: 10px auto;
+	width: 580px;
+	height: 330px;
+	float: right;
+}
+#container3{
+	margin:10px auto;
+	width: 580px;
+	height: 330px;
+	float:left;
+}
+#container4{
+	margin: 10px auto;
+	width: 580px;
+	height: 330px;
+	float:right;
+}
+
+.img{width:100%;}
+.demo{background:black;margin:0 5px;width:170px;height:170px;}
+.demo:hover{border:1px red solid;}
+.demo:hover{width:166px;height:166px;border:2px solid #D94600;}

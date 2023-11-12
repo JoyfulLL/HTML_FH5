@@ -1,0 +1,58 @@
+@charset "utf-8";
+#page-container{
+    width: 760px;
+    Height: 676px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+#main-nav{
+    width: 760px;
+    Height: 50px;
+    background-color: crimson;
+    color: #000000;
+    font-style: normal;
+}
+#header{Width:760px; Height:150px;background-color: aqua;}
+#content{Width:280px; Height:400px;background-color: darkseagreen;float: left;}
+#sidebar-a{Width:480px; Height:400px;background-color: antiquewhite;float: right;}
+
+
+#RecommandCarForm{
+	margin:0 auto;
+	background-color:#585858;
+	background: image("img/recommend car/International 800A.png");
+}
+
+#quanju{
+	background-color: darkgrey;
+	width: 1920px;
+	height: 1080px;
+	margin: 0 auto;
+}
+
+.mainContent .productRow .productInfo {
+	width: 100%;
+	display: block;
+/*
+	padding-left: 0px;
+	padding-right: 0px;
+*/
+	position: relative;
+	left: -2%;
+	margin: 0 auto;
+}
+
+#footer{
+	width: auto;
+	text-align: center;
+	height: 20px;
+	background-color: #000;
+	color: #FFF;
+}
