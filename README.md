@@ -9,7 +9,8 @@
 1）用户界面设计
 可用绘图工具设计出主要页面的界面；
 用PPT构造出基本布局
- 
+ ![image](https://github.com/JoyfulLL/HTML_FH5/assets/49276046/70a3a4ff-7d1f-486e-81c7-a0e446ef2d02)
+
  
 
 2）功能设计
