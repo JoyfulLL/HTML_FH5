@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>注册</title>
+    <script type="text/javascript">
+
+
+      function check() {
+
+      	var use = document.getElementById('use').value;
+      	var pw = document.getElementById('pw').value;
+      	var rpw = document.getElementById('rpw').value;
+
+      	var useName = use;
+      	var password = pw;
+      	var repeatpassword = rpw;
+      	var email = document.getElementById('email').value;
+      	//正则表达式
+      	var check_email = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+
+      	if (useName == "" || password == "" || repeatpassword == "") {
+      		alert('输入框不能为空');
+      		return false;
+      	}
+      	//用户名不能以数字开头，长度不低于6，不高于20 返回位于57和48的字符编码
+      	if (useName[0].charCodeAt() <= 57 && useName[0].charCodeAt() >= 48) {
+      		alert('用户名不能以数字开头');
+      		return false;
+      	}
+      	if ((useName.length) < 6 || (useName.length) > 20) {
+      		alert('用户名长度不低于6，不高于20');
+      		return false;
+      	}
+      	if ((password.length) < 6 || (password.length) > 20) {
+      		alert('密码长度不低于6，不高于20');
+      		return false;
+      	}
+      	if (repeatpassword != password) {
+      		alert('两次密码不一致');
+      		return false;
+      	}
+      	if ((repeatpassword == useName) || (password == useName)) {
+      		alert('用户名不能与同密码一致');
+      		return false;
+      	}
+
+      	if (!check_email.test(email)) {
+      		alert('邮箱格式不正确');
+      		return false;
+      	}
+
+      	return true;
+      }
+
+      function clear_content() {
+      	document.getElementById("username").value = "";
+      	document.getElementById("password").value = "";
+      }
+
+
+      //最终检查函数
+      function CheckAccount() {
+      	if (check()) {
+      		alert('注册成功');
+      		return true;
+      	} else
+      		alert('ERROR');
+      	return false;
+      }
+    </script>
+
+    <style>
+      #pagecontain {
+        width: 310px;
+        font-size: 15px;
+        height: 185px;
+        border: 2px solid #f97b7d;
+        margin: 350px auto;
+      }
+
+      /*		换行效果。将p构建为一个盒子*/
+      #pagecontain p {
+        width: 300px;
+        margin: 8px 5px 8px 5px;
+      }
+
+      /*		设置lable标签，显示出边框*/
+      label {
+        float: left;
+        background-color: cadetblue;
+        width: 130px;
+        text-align: center;
+        height: 20px;
+        margin: 0px 5px 2px 3px;
+        border: 1.5px solid #000000;
+      }
+
+      input {
+        float: left;
+        width: 150px;
+        margin: 0 0 5px;
+        height: 18px;
+      }
+
+      #underbottom {
+        width: 55px;
+        margin-left: 65px;
+        height: 25px;
+      }
+
+      #underbottom1 {
+        width: 55px;
+        margin-left: 65px;
+        height: 25px;
+      }
+		
+	body {
+		background: url("img/lodgein/forza_resource_83cb7e5b2cf5d1a64d08746c43ebbc0f_ForzaHorizon5_Launch_Review-08_16x9_WM-1.jpg") no-repeat center center fixed;
+		/*兼容浏览器版本*/
+         -webkit-background-size: cover;
+		-o-background-size: cover;                
+		background-size: cover;
+		}
+    </style>
+  </head>
+
+  <body bgcolor="#555353">
+	
+    <div id="pagecontain">
+      <p>用户注册</p>
+      <p>
+        <!--	文本提示标签 一个简单的行内元素-->
+        <label>输入用户名:</label>
+        <input type="text" name="" id="use" />
+      </p>
+
+      <p>
+        <label>输入密码:</label>
+        <input type="password" name="" id="pw" />
+      </p>
+
+      <p>
+        <label>重复输入密码:</label>
+        <input type="password" name="" id="rpw" />
+      </p>
+
+      <p>
+        <label>输入邮箱:</label>
+        <input type="text" name="" id="email" />
+      </p>
+
+      <p>
+        <input
+          type="submit"
+          name=""
+          id="underbottom"
+          value="提交"
+          onClick="CheckAccount()"
+        />
+        <!--感觉用刷新代替清空更简单-->
+        <input
+          type="button"
+          value="取消"
+          onclick="javascript:location.reload()"
+          id="underbottom1"
+        />
+      </p>
+    </div>
+  </body>
+</html>

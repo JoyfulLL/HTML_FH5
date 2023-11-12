@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>登录</title>
+    <script type="text/javascript">    
+      //检查函数
+      function CheckAccount() {
+		alert("登录成功");
+      		return true;
+	  }
+    </script>
+
+    <style>
+      #pagecontain {
+        width: 310px;
+        font-size: 15px;
+        height: 185px;
+        border: 2px solid #f97b7d;
+        margin: 350px auto;
+      }
+
+      /*		换行效果。将p构建为一个盒子*/
+      #pagecontain p {
+        width: 300px;
+        margin: 8px 5px 8px 5px;
+      }
+
+      /*		设置lable标签，显示出边框*/
+      label {
+        float: left;
+        background-color: cadetblue;
+        width: 130px;
+        text-align: center;
+        height: 20px;
+        margin: 0px 5px 2px 3px;
+        border: 1.5px solid #000000;
+      }
+
+      input {
+        float: left;
+        width: 150px;
+        margin: 0 0 5px;
+        height: 18px;
+      }
+
+      #underbottom {
+        width: 55px;
+        margin-left: 65px;
+        height: 25px;
+      }
+
+      #underbottom1 {
+        width: 55px;
+        margin-left: 65px;
+        height: 25px;
+      }
+		
+		#SignBox{
+			width: auto;
+			height: :auto;	
+			margin: 0 auto;
+		}
+		body {
+				background: url("img/SIGNIN/forza_resource_02955baa7216e236a5ab7e8354c3c94c_ForzaHorizon5-06-16x9_WM_NightDrift.png") no-repeat center center fixed;
+				/*兼容浏览器版本*/
+                -webkit-background-size: cover;
+				-o-background-size: cover;                
+				background-size: cover;
+		}
+
+    </style>
+  </head>
+
+  <body>
+  <div id="SignBox">
+    <div id="pagecontain">
+      <p>登录</p>
+      <p>
+        <label>输入用户名:</label>
+        <input type="text" name="" id="use" />
+      </p>
+
+      <p>
+        <label>输入密码:</label>
+        <input type="password" name="" id="pw" />
+      </p>
+
+      <p>
+        <input
+          type="submit"
+          name=""
+          id="underbottom"
+          value="登录"
+          onClick="CheckAccount()"
+        />
+        <input
+          type="button"
+          value="取消"
+          onclick="javascript:location.reload()"
+          id="underbottom1"
+        />
+      </p>
+    </div>
+</div>
+  </body>
+</html>
